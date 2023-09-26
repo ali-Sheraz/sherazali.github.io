@@ -1,1 +1,0 @@
-curl -X POST -H "Content-Type: application/json" -d '{"username": "your_username"}' http://localhost:3000/authenticate
