@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CarHireBookingComponent from "./components/CarHireBookingComponent";
+import LoginComponent from "./components/LoginComponent";
+import RegistrationComponent from "./components/RegistrationComponent";
 
-function App() {
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className="bg1">
+
+      <Router>
+     
+        <Routes>
+          {" "}
+          <Route path="/" exact element={<LoginComponent />} />
+          <Route path="carhire" element={<CarHireBookingComponent />} />
+          <Route path="login" element={<LoginComponent />} />
+          <Route path="registration" element={<RegistrationComponent />} />
+
+
+        </Routes>
+     
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

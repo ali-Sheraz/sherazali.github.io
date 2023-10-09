@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -6,12 +7,151 @@
   height: 40vmin;
   pointer-events: none;
 }
+.carousel-inner {
+  height: 300px; 
+}
 
+.content-container {
+  height: calc(100vh - 56px); /* Subtract navbar height */
+  overflow: hidden; /* Hide any content that goes beyond the viewport */
+}
+/* Additional custom styles */
+.carousel-inner img {
+  max-height: 100%;
+  object-fit: cover;
+}
+.carouselBackground {
+  max-width: 500px;
+  margin:  auto;
+}
+.bg1 {
+  background-image: url("../public/image2.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blurred-form-background {
+  backdrop-filter: blur(5px); /* Adjust the blur intensity as needed */
+  background-color: rgba(255, 255, 255, 0.5); /* Add a slight white tint to the background */
+  padding: 20px; /* Add padding for better visibility */
+}
+.blurred-navbar {
+  backdrop-filter: blur(5px); /* Adjust the blur intensity as needed */
+  background-color: rgba(255, 255, 255, 0.5); /* Add a slight white tint to the background */
+}
+.blurred-button {
+  backdrop-filter: blur(5px); /* Adjust the blur intensity as needed */
+  background-color: rgba(255, 255, 255, 0.5); /* Add a slight white tint to the background */
+}
+.blurred-carousel {
+  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+
+}
+.crousalWidth{
+  width: 480px;
+
+}
+.form-group {
+  width: 100%; /* Set the width to 100% to ensure it takes the full width of the card */
+}
+.footer {
+  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+  padding: 20px 0;
+  text-align: center;
+  background-color: #1188ff11;
+}
+.pill {
+  color: black; /* Change the text color to black */
+  background-color: transparent; /* Remove the background color */
+}
+/* Custom styles for the active and non-active pills */
+.nav-underline .nav-item .nav-link.active {
+color: white; /* Change the text color for the active pill */
+background-color: black; /* Change the background color for the active pill */
+}
+
+.nav-underline .nav-item .nav-link {
+color: black; /* Change the text color for the non-active pills */
+border-color: black; /* Change the border color for the non-active pills */
+border-radius:5px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+*{
+  box-sizing: border-box;
+}
+/* body{
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #130f40;
+  font-family: 'Lato' !important;
+} */
+.search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.input-search{
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #22a6b3;
+  padding-right: 40px;
+  color:#fff;
+}
+.input-search::placeholder{
+  color:rgba(255,255,255,.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:#ffffff ;
+  background-color:transparent;
+  pointer-events: painted;  
+}
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+
 
 .App-header {
   background-color: #282c34;
