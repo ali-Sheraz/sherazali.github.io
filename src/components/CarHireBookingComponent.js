@@ -44,7 +44,7 @@ return (
             style={{ margin: "20px", height: "600px" }}
           >
             <div className="card-body">
-              <h3 className="card-title text-center">Choose Your Booking</h3>
+              <h3 className="card-title text-center">Choose Booking</h3>
               <ul className="nav nav-underline nav-justified mt-3 ">
             
                 <li className="nav-item ">
